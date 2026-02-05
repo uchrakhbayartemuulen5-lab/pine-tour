@@ -1,0 +1,655 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 5vw;
+}
+
+.logo {
+  width: 101px;
+  height: 35px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.lang-button {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lang-button:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: clamp(80px, 15vw, 250px);
+  color: white;
+  opacity: 0.9;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.hero-tagline {
+  font-size: clamp(30px, 6vw, 100px);
+  color: white;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.hero-sub {
+  font-size: clamp(28px, 4vw, 64px);
+  color: white;
+  opacity: 0.6;
+  font-weight: 600;
+  order: 3;
+  margin-top: 10px;
+}
+
+/* ===== Section with background image pattern ===== */
+.locations,
+.roadmap,
+.pricing {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ===== Locations Section ===== */
+.locations-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 80px 5vw;
+}
+
+.location-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.layer-back {
+  background-color: rgb(80, 176, 255);
+  top: -14px;
+  left: -14px;
+}
+
+.layer-mid {
+  background-color: rgb(99, 167, 177);
+  top: 7px;
+  left: 7px;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: clamp(14px, 1.5vw, 26px);
+  font-weight: 500;
+  opacity: 0.8;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Roadmap Section ===== */
+.roadmap-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 5vw;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 57px);
+  font-weight: 600;
+  color: black;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: clamp(16px, 2vw, 27px);
+  color: black;
+  opacity: 0.6;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.roadmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  border-radius: 90px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.roadmap-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.roadmap-info {
+  flex: 1;
+}
+
+.roadmap-place {
+  font-size: clamp(20px, 2.5vw, 35px);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.roadmap-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(14px, 1.5vw, 20px);
+}
+
+.roadmap-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.day-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.day-badge span {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* ===== Pricing Section ===== */
+.pricing-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 5vw;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.price-card {
+  background-color: white;
+  border-radius: 50px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.price-card.featured {
+  border: 3px solid rgb(120, 93, 193);
+}
+
+.price-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.price-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.price-card-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.price-amount {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.price-desc {
+  font-size: 21px;
+  color: black;
+  opacity: 0.7;
+}
+
+.price-desc-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.popular-badge {
+  background-color: rgb(120, 93, 193);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 45px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.price-features {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.features-label {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 19px;
+  color: black;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.features-list li img {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.select-package {
+  margin-top: 30px;
+  width: 100%;
+  padding: 25px;
+  background-color: rgb(106, 182, 192);
+  border: none;
+  border-radius: 45px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.select-package:hover {
+  background-color: rgb(86, 162, 172);
+  transform: scale(1.02);
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border-radius: 45px;
+  padding: 14px 25px;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.social-button img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-button span {
+  font-size: 22px;
+  color: rgb(78, 54, 144);
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.footer-logo {
+  width: 101px;
+  height: 35px;
+}
+
+/* ===== Responsive - Tablet ===== */
+@media (max-width: 1024px) {
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .roadmap-item {
+    padding: 25px 30px;
+  }
+
+  .price-card-title {
+    font-size: 24px;
+  }
+
+  .price-amount {
+    font-size: 40px;
+  }
+}
+
+/* ===== Responsive - Small Tablet ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 5vw;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .roadmap-content,
+  .pricing-content {
+    padding: 50px 5vw;
+  }
+
+  .roadmap-list {
+    max-width: 100%;
+  }
+
+  .roadmap-item {
+    padding: 20px 25px;
+    border-radius: 50px;
+  }
+
+  .roadmap-place {
+    font-size: 18px;
+  }
+
+  .day-badge {
+    width: 50px;
+    height: 50px;
+  }
+
+  .day-badge span {
+    font-size: 12px;
+  }
+
+  .footer {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== Responsive - Mobile ===== */
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-tagline {
+    font-size: 24px;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px 5vw;
+  }
+
+  .card-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .roadmap-content,
+  .pricing-content {
+    padding: 40px 5vw;
+  }
+
+  .roadmap-item {
+    padding: 15px 20px;
+    border-radius: 40px;
+  }
+
+  .roadmap-place {
+    font-size: 16px;
+  }
+
+  .price-card {
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+
+  .price-card-title {
+    font-size: 22px;
+  }
+
+  .price-amount {
+    font-size: 36px;
+  }
+
+  .features-list li {
+    font-size: 16px;
+  }
+
+  .select-package {
+    padding: 18px;
+    font-size: 20px;
+  }
+
+  .social-button {
+    padding: 12px 20px;
+  }
+
+  .social-button span {
+    font-size: 15px;
+  }
+}
